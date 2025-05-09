@@ -5,10 +5,6 @@ html, body {
 * {
     box-sizing: border-box;
   }
- .slideinfo .slideh{
-  color:bisque;
-  z-index:1;
- } 
 
   /* Section color themes */
 .slider {
