@@ -1,10 +1,14 @@
 
   let currentIndex = 0;
-  const slideContainer = document.getElementById('slideContainer');
   const totalSlides = document.querySelectorAll('.slide').length;
+  
+  const slideContainer = document.getElementById('slideContainer');
+  const slides = document.querySelectorAll('.slide');
+  slideContainer.style.width = `${slides.length * 100}vw`;
 
   function updateSlidePosition() {
-    slideContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+    const slideWidth = document.querySelector('.slide').clientWidth;
+    slideContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
   }
 
   function nextSlide() {
